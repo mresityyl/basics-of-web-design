@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="keywords" content="basvuru, form, hacker, etik, white">
+    <meta name="description" content="Etik hacker başvuru formu">
+    <title>İş Başvuru Formu</title> 
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon-16x16.png"/>
+
+    <style>
+        *{
+            /* color: rgb(44,62,81); */
+            /* background-color: rgb(236, 236, 236); */
+        }
+        h1{
+            margin: 0;
+            padding-left: 180px;
+        }
+        #marka{
+            position: relative;
+            left: 50px;
+        }
+        #marka2{
+            position: relative;
+            left: 50px;
+        }
+        #unvan{
+            padding-left: 280px;
+        }
+        .table-top-space{
+            margin-top: 20px;
+        }
+        .text-center{
+            text-align: center; 
+        }
+        .ana-baslik{
+            font-size: 25px;
+            background-color: rgb(255, 192, 104);
+        }
+        .bg-blue{
+            background-color: rgb(155, 197, 223);
+        }
+        #file-load{
+            position: relative;
+            left: 30px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <form action="kayit.php" method="post">
+
+        <!-- BİRİNCİ KISIM -->
+        <table  class="table" border="1" width="1000" align="center">
+            <!-- Şirket Bilgi Satırı -->
+            <tr>
+                <td width="100">
+                    <img src="img/logo.png" alt="" width="100px">
+                </td>
+                <td  width="200">
+                    <span  id="marka">SUDOTEK</span>
+                    <br><hr>
+                    <span id="marka-2">Super User Do Technology</span>
+                </td>
+                <td width="700">
+                    <h1>İŞ BAŞVURU FORMU</h1><br>
+                    <span id="unvan">ETİK HACKER</span>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Kişisel Bilgiler -->
+        <table id="table2" class="table-top-space text-center" border="1" width="1000" align="center">
+            <tr>
+                <td  class="ana-baslik" colspan="3">
+                    KİŞİSEL BİLGİLER
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue" width="150px">
+                    <label for="Ad-Soyad:">Ad-Soyad:</label>
+                </td>
+                <td width="50px">
+                    <input type="text" size="80px" required name="Ad-Soyad" id="Ad-Soyad">
+                </td>
+                <td rowspan="9">    
+                    <img src="img/loading-tea.gif" alt=""><br>
+                    ( Resim ) <br><br>
+                    <input id="file-load" type="file" required>
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue">
+                    <label for="email">Email</label></td>
+                </td>
+                <td>
+                    <input type="email" name="email" id="email" size="80px" required placeholder="e-mail">
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue" width="150px">
+                    Cep Telefonu No:
+                </td>
+                <td width="50px">
+                    <input size="80px" type="tel" required>
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue" width="150px">
+                    TC Kimlik No:
+                </td>
+                <td width="50px">
+                    <input type="number" required>
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue" width="150px">
+                    <label for="Cinsiyet">Cinsiyet:</label>
+                </td>
+                <td width="50px">
+                    <input type="radio" name="cinsiyet" value="erkek" id="erkek" required><label for="erkek">Erkek</label> 
+                    <input type="radio" name="cinsiyet" value="kadın" id="kadın" required><label for="kadın">Kadın</label> 
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue" width="150px">
+                    Doğum Tarihi:
+                </td>
+                <td width="50px">
+                    <input type="date" size="80px" required>
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue" width="150px">
+                    Medeni Durum:
+                </td>
+                <td width="50px">
+                    <input type="radio" name="medeniD" value="evli" id="evli" required><label for="evli">Evli</label> 
+                    <input type="radio" name="medeniD" value="bekar" id="bekar" required><label for="bekar">Bekar</label> 
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue" width="150px">
+                    <label for="askerlikD">Askerlik Durumu:</label>
+                </td>
+                <td width="50px">
+                    <select required name="askerlikD" id="askerlikD">
+                        <option value="Yapıldı" selected>Yapıldı</option>
+                        <option value="Yapılmadı">Yapılmadı</option>
+                        <option value="Tecilli">Tecilli</option>
+                        <option value="Muaf">Muaf</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <!-- EĞİTİM BİLGİLERİ -->
+        <table class="table-top-space text-center" border="1" width="1000" align="center">
+            <tr>
+                <td  class="ana-baslik" colspan="3">
+                    EĞİTİM BİLGİLERİ
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue" width="150px" >
+                    <label for="">Eğitim Durumu:</label>
+                </td>
+                <td colspan="3">
+                    <label for="egitim">İlköğretim</label>
+                    <input type="checkbox" id="egitim">
+
+                    <label for="Orta-ogretim">// Orta Öğretim</label>
+                    <input type="checkbox" id="Orta-ogretim">
+
+                    <label for="onLisans">// Önlisans</label>
+                    <input type="checkbox" id="onLisans">
+
+                    <label for="Lisans">// Lisans</label>
+                    <input type="checkbox" id="Lisans">
+
+                    <label for="Yüksek">// Yüksek Lisans</label>
+                    <input type="checkbox" id="Yüksek">
+
+                    <label for="Doktora">// Doktora</label>
+                    <input type="checkbox" id="Doktora">
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td class="bg-blue" width="425">
+                    Okuduğu Okul
+                </td>
+                <td class="bg-blue">
+                    Okuduğu Bölüm
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue">
+                    Varsa Önlisans
+                </td>
+                <td width="50px">
+                    <input type="text" size="55px">
+                </td>
+                <td width="50px">
+                    <input type="text" size="55px">
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue">
+                    Varsa Lisans
+                </td>
+                <td width="50px">
+                    <input type="text" size="55px">
+                </td>
+                <td width="50px">
+                    <input type="text" size="55px">
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue">
+                    Varsa Y. Lisans
+                </td>
+                <td width="50px">
+                    <input type="text" size="55px">
+                </td>
+                <td width="50px">
+                    <input type="text" size="55px">
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue">
+                    Varsa Doktora
+                </td>
+                <td width="50px">
+                    <input type="text" size="55px">
+                </td>
+                <td width="50px">
+                    <input type="text" size="55px">
+                </td>
+            </tr>
+        </table>
+
+        <!-- YABANCI DİL -->
+        <table class="table-top-space text-center" border="1" width="1000" align="center">
+            <tr>
+                <td class="ana-baslik" colspan="3">
+                    YABANCI DİL
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue" width="700px">
+                    Yabancı dil
+                </td>
+                <td class="bg-blue" width="300px">
+                    Düzeyi
+                </td>
+            </tr>
+            <tr>
+                <td width="700px">
+                    <input type="text" size="100px">
+                </td>
+                <td>
+                    0<input type="range" min="0" max="5" value="0" step="1">5
+                </td>
+            </tr>
+            <tr>
+                <td width="700px">
+                    <input type="text" size="100px">
+                </td>
+                <td>
+                    0<input type="range" min="0" max="5" value="0" step="1">5
+                </td>
+            </tr>
+            <tr>
+                <td width="700px">
+                    <input type="text" size="100px">
+                </td>
+                <td>
+                    0<input type="range" min="0" max="5" value="0" step="1">5
+                </td>
+            </tr>
+        </table>    
+
+        <!-- Diğer Belgeler -->
+        <table class="table-top-space text-center" border="1" width="1000" align="center">
+            <tr>
+                <td class="ana-baslik" colspan="2">
+                    Diğer Belgeler
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue">
+                    Özgeçmiş:
+                </td>
+                <td>
+                    <input type="file">
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue">
+                    Adli Sicil Kaydı:
+                </td>
+                <td>
+                    <input type="file">
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue">
+                    Diploma kopyası:
+                </td>
+                <td>
+                    <input type="file">
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue">
+                    Nüfus cüzdanı kopyası:
+                </td>
+                <td>
+                    <input type="file">
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue">
+                    Sertifikalar:
+                </td>
+                <td>
+                    <input type="file">
+                </td>
+            </tr>
+        </table>
+
+        <!-- Mesleki Yeterlilik -->
+        <table class="table-top-space text-center" border="1" width="1000" align="center">
+            <tr>
+                <td class="ana-baslik" colspan="2">
+                    Mesleki Yeterlilik
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue">
+                    ---TEMEL BİLGİLER---
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="ag"><label for="ag">Ağ Bilgisi //</label>
+                    <input type="checkbox" id="veri"><label for="veri">Veri Tabanı //</label>
+                    <input type="checkbox" id="prog"><label for="prog">Programlama //</label>
+                    <input type="checkbox" id="sistem"><label for="sistem">İşletim Sistemi //</label>
+                    <input type="checkbox" id="zaaf"><label for="zaaf">Web Sayfalarının Zaafları</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue">
+                    ---DİĞER BİLGİLER---
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="it"><label for="it">IT //</label>
+                    <input type="checkbox" id="c"><label for="c">C //</label>
+                    <input type="checkbox" id="ccna"><label for="ccna">CCNA //</label>
+                    <input type="checkbox" id="ccc"><label for="ccc">C++ //</label>
+                    <input type="checkbox" id="linux"><label for="linux">Linux</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-blue">
+                    ---SERTİFİKALAR---
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="ceh9"><label for="ceh9">CEH 9 //</label>
+                    <input type="checkbox" id="cehv10"><label for="cehv10">CEH V10 //</label>
+                    <input type="checkbox" id="oscp"><label for="oscp">OSCP //</label>
+                    <input type="checkbox" id="cissp"><label for="cissp">CISSP</label>
+                </td>
+            </tr>
+
+        </table>
+
+        <!-- Gönder / İptal -->
+        <table class="table-top-space" border="1" width="1000" align="center">
+            <tr>
+                <td width="500">
+                    <input type="submit" value="Formu Gönder" title="Gönder">
+                    <input type="reset" value="Formu Temizle" title="Temizle">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
